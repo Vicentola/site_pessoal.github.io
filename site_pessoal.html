@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
+    <meta charset="UTF-8">
+    <title>site pessoal</title>
+    <link rel="stylesheet" href="colomboScroll.css">
+    <link rel="stylesheet" href="principal.css">
+
+</head>
+<body>
+  
+  <div class="container">
+    
+    <!-- Imagem de fundo do container -->
+
+    <!-- Título principal da página -->
+    <h1> MY Portifolio</h1>
+    <!-- Botões para navegação entre seções da página -->
+    <div class="button-container">
+      <button type="button" style="font-size: 36px;" onclick="scrollToNextSection()">☟</button>
+    </div>
+  </div>
+
+     <!-- Seção que indica a próxima seção da página -->
+  <div class="next-section">
+    <div class="card-container" style="max-width:1080px; min-width: 800;" >
+      
+    <!-- Cartão 1 -->
+    <a class="card-link" href="experiencia criativa.html">
+      <div class="card card1">
+        <div class="card-title" > </div>
+      </div>
+    </a>
+
+    <!-- Cartão 2 -->
+    <a class="card-link" href="ciber.html">
+      <div class="card card2">
+        <div class="card-title"> Sistemas Ciberfísicos</div>
+      </div>
+    </a>
+
+    
+
+    <!-- Cartão 4 -->
+    <a class="card-link" href="ra.html">
+      <div class="card card4">
+        <div class="card-title">Raciocínio Algorítmico</div>
+      </div>
+    </a>
+    
+  
+  </div>
+  </div>
+
+
+    <!-- Container dos cartões com links para diferentes seções do site -->
+  
+</body>
+
+    <script>
+        function scrollToSection(target) {
+            const section = document.querySelector(target);
+
+            // Obtém a posição do topo da seção em relação ao topo do documento
+            const sectionTop = section.offsetTop;
+
+            // Rola a página suavemente para a seção
+            window.scrollTo({
+                top: sectionTop,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollToNextSection() {
+            scrollToSection('.next-section');
+        }
+
+    </script>
+</body>
+</html>
